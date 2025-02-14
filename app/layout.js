@@ -1,18 +1,17 @@
-import { GoogleTagManager } from "@next/third-parties/google";
-import { Inter } from "next/font/google";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Footer from "./components/footer";
-import ScrollToTop from "./components/helper/scroll-to-top";
-import Navbar from "./components/navbar";
-import "./css/card.scss";
-import "./css/globals.scss";
-const inter = Inter({ subsets: ["latin"] });
+import { Inter } from 'next/font/google';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Footer from './components/footer';
+import ScrollToTop from './components/helper/scroll-to-top';
+import Navbar from './components/navbar';
+import './css/card.scss';
+import './css/globals.scss';
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: "Portfolio of Abu Said - Software Developer",
+  title: 'codeantik',
   description:
-    "This is the portfolio of Abu Said. I am a full stack developer and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.",
+    "Welcome to the portfolio of codeantik! I'm a full-stack developer and AI enthusiast with a passion for learning and innovation. I thrive on tackling new challenges and collaborating with others to build impactful solutions. Always eager to grow, I embrace new technologies and opportunities to create something meaningful.",
 };
 
 export default function RootLayout({ children }) {
@@ -27,7 +26,6 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
       </body>
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
     </html>
   );
 }
