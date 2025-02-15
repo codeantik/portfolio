@@ -12,11 +12,16 @@
   }
 }
 
+html {
+  @apply scroll-smooth; /* Enables smooth scrolling */
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background-color: #0d1224;
 }
 
+/* Sticky Card Offsets */
 #sticky-card-1 {
   --index: 1;
 }
@@ -34,6 +39,6 @@ body {
 }
 
 .sticky-card {
-  // padding-top: calc(var(--index) * 2.5rem);
+  /* padding-top: calc(var(--index) * 2.5rem); */
   top: calc(var(--index) * 4rem);
 }

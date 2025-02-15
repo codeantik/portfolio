@@ -2,7 +2,7 @@ export const personalData = {
   name: 'ANKIT SINGH',
   profile: '/profile.jpg',
   designation: 'Software Developer',
-  description: `Hi, I'm Ankit Singh (CodeAntik), a passionate and self-driven programmer who thrives on problem-solving and innovation. With a strong foundation in JavaScript, I specialize in building dynamic and scalable web applications. I’m always eager to explore new technologies, enhance my skills, and contribute to making the web more open and accessible. A quick learner with a self-learning mindset, I embrace challenges and enjoy collaborating on impactful projects. I'm open to job opportunities that align with my skills and interests`,
+  description: `Hi, I'm Ankit Singh (codeantik), a passionate and self-driven programmer who thrives on problem-solving and innovation. With a strong foundation in JavaScript, I specialize in building dynamic and scalable web applications. I’m always eager to explore new technologies, enhance my skills, and contribute to making the web more open and accessible. A quick learner with a self-learning mindset, I embrace challenges and enjoy collaborating on impactful projects. I'm open to job opportunities that align with my skills and interests`,
   email: 'ankitsinankitsin888000@gmail.com',
   phone: '+919340091267',
   address:
