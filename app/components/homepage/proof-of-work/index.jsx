@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsArrowUpRight } from "react-icons/bs";
 import GlowCard from "../../helper/glow-card";
+import FadeIn from "../../helper/fade-in";
 
 const NEKI_URL = "https://my.neki.io/explore";
 
@@ -40,6 +41,7 @@ function ProofOfWork() {
       </div>
 
       <div className="py-8">
+        <FadeIn direction="up" delay={0.1}>
         <GlowCard identifier="proof-of-work">
           <div className="relative p-6 lg:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <Image
@@ -147,6 +149,7 @@ function ProofOfWork() {
             </Link>
           </div>
         </GlowCard>
+        </FadeIn>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import { BsPersonWorkspace } from "react-icons/bs";
 import lottieFile from '../../../assets/lottie/study.json';
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
+import FadeIn from "../../helper/fade-in";
 
 function Education() {
   return (
@@ -22,29 +23,32 @@ function Education() {
         </div>
       </div>
 
-      <div className="flex justify-center my-5 lg:py-8">
-        <div className="flex  items-center">
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-          <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
-            Educations
-          </span>
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+      <FadeIn direction="up" delay={0.05}>
+        <div className="flex justify-center my-5 lg:py-8">
+          <div className="flex  items-center">
+            <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+            <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
+              Educations
+            </span>
+            <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+          </div>
         </div>
-      </div>
+      </FadeIn>
 
       <div className="py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          <div className="flex justify-center items-start">
+          <FadeIn direction="left" delay={0.1} className="flex justify-center items-start">
             <div className="w-3/4 h-3/4">
               <AnimationLottie animationPath={lottieFile} />
             </div>
-          </div>
+          </FadeIn>
 
           <div>
             <div className="flex flex-col gap-6">
               {
-                educations.map(education => (
-                  <GlowCard key={education.id} identifier={`education-${education.id}`}>
+                educations.map((education, i) => (
+                  <FadeIn key={education.id} direction="right" delay={0.15 + i * 0.1}>
+                  <GlowCard identifier={`education-${education.id}`}>
                     <div className="p-3 relative text-white">
                       <Image
                         src="/blur-23.svg"
@@ -71,6 +75,7 @@ function Education() {
                       </div>
                     </div>
                   </GlowCard>
+                  </FadeIn>
                 ))
               }
             </div>

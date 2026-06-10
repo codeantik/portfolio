@@ -6,6 +6,7 @@ import { BsPersonWorkspace } from "react-icons/bs";
 import experience from '../../../assets/lottie/code.json';
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
+import FadeIn from "../../helper/fade-in";
 
 function Experience() {
   return (
@@ -18,29 +19,32 @@ function Experience() {
         className="absolute top-0 -z-10"
       />
 
-      <div className="flex justify-center my-5 lg:py-8">
-        <div className="flex  items-center">
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-          <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
-            Experiences
-          </span>
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+      <FadeIn direction="up" delay={0.05}>
+        <div className="flex justify-center my-5 lg:py-8">
+          <div className="flex  items-center">
+            <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+            <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
+              Experiences
+            </span>
+            <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+          </div>
         </div>
-      </div>
+      </FadeIn>
 
       <div className="py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          <div className="flex justify-center items-start">
+          <FadeIn direction="left" delay={0.1} className="flex justify-center items-start">
             <div className="w-full h-full">
               <AnimationLottie animationPath={experience} />
             </div>
-          </div>
+          </FadeIn>
 
           <div>
             <div className="flex flex-col gap-6">
               {
-                experiences.map(experience => (
-                  <GlowCard key={experience.id} identifier={`experience-${experience.id}`}>
+                experiences.map((experience, i) => (
+                  <FadeIn key={experience.id} direction="right" delay={0.15 + i * 0.1}>
+                  <GlowCard identifier={`experience-${experience.id}`}>
                     <div className="p-3 relative">
                       <Image
                         src="/blur-23.svg"
@@ -69,6 +73,7 @@ function Experience() {
                       </div>
                     </div>
                   </GlowCard>
+                  </FadeIn>
                 ))
               }
             </div>

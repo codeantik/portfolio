@@ -8,12 +8,12 @@ const DEFAULT_BTN_CLS =
 const SCROLL_THRESHOLD = 50;
 
 const ScrollToTop = () => {
-  const [btnCls, setBtnCls] = useState(DEFAULT_BTN_CLS);
+  const [btnCls, setBtnCls] = useState(DEFAULT_BTN_CLS + " hidden");
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > SCROLL_THRESHOLD) {
-        setBtnCls(DEFAULT_BTN_CLS.replace(" hidden", ""));
+        setBtnCls(DEFAULT_BTN_CLS);
       } else {
         setBtnCls(DEFAULT_BTN_CLS + " hidden");
       }

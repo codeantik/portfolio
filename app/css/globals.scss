@@ -13,12 +13,38 @@
 }
 
 html {
-  @apply scroll-smooth; /* Enables smooth scrolling */
+  @apply scroll-smooth;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background-color: #0d1224;
+}
+
+/* Respect motion preferences — framer-motion checks useReducedMotion,
+   but this covers any CSS transitions/animations added directly */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Blinking cursor used in hero and project-card code blocks */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.blink::after {
+  content: "|";
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+  color: #16f2b3;
 }
 
 /* Sticky Card Offsets */
